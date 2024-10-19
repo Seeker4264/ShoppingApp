@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getHomeInfo } from "./lib/get-home";
+import { getHomeInfo } from "../lib/get-home";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export default async function Home() {
