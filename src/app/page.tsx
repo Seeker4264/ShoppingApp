@@ -1,103 +1,67 @@
 import Image from "next/image";
-import { getHomeInfo } from "../lib/get-home";
+import { getHomeInfo } from "@/lib/get-home";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import Link from "next/link";
+
+import categoriesHome from "@/components/categories-home";
+
+import truckImage from "@/public/truck-speed.svg";
+import shieldImage from "@/public/shield-check.svg";
+import supportImage from "@/public/support.svg";
 
 export default async function Home() {
-    const { title, description } = await getHomeInfo();
+    const { title: homeTitle, description: homeDesc, image: homeImage } = await getHomeInfo();
 
     return (
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-            <Image
-            className="dark:invert"
-            src="https://nextjs.org/icons/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-            />
-            <ol className="[&>p>strong]:font-bold text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-            <li className="mb-2">
-                {title}
-            </li>
-            <li>
-                <BlocksRenderer content={description}/>
-            </li>
-            </ol>
+        <main>
 
-            <div className="flex gap-4 items-center flex-col sm:flex-row">
-            <a
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-                href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Image
-                className="dark:invert"
-                src="https://nextjs.org/icons/vercel.svg"
-                alt="Vercel logomark"
-                width={20}
-                height={20}
-                />
-                Deploy now
-            </a>
-            <a
-                className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-                href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Read our docs
-            </a>
-            </div>
+            <section className="flex flex-row gap-5 m-6">
+                <div className="relative flex flex-col justify-center items-center w-full text-white font-normal shadow-md shadow-slate-950">
+                    <div className="flex flex-col justify-center items-center gap-2 w-full h-full p-4 backdrop-brightness-[0.3]">
+                        <h1 className="text-center text-5xl font-medium">{homeTitle}</h1>
+                        <h2 className="text-center mt-4 text-2xl">
+                            <BlocksRenderer content={homeDesc} />
+                        </h2>
+                    </div>
+                    <Image
+                        className="absolute object-cover -z-10"
+                        src={homeImage}
+                        fill={true}
+                        alt="Cover-image"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority/>
+                </div>
+                {categoriesHome()}
+            </section>
+
+            <section>
+                <ol className="grid grid-cols-3 grid-rows-1 gap-32 px-20 bg-[#ecf3f3] [&>li]:flex [&>li]:flex-col [&>li]:justify-start [&>li]:items-center [&>li]:py-10 [&>li>h3]:text-2xl [&>li>h3]:mt-5 [&>li>h3]:text-center [&>li>h3]:font-medium [&>li>h3]:text-slate-900">
+                    <li className="group">
+                        <svg className="size-24 text-slate-900 duration-150 group-hover:text-[#80a39c] group-hover:scale-105" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg>
+                        <h3>FAST DELIVERY</h3>
+                    </li>
+                    <li className="group">
+                        <svg className="size-24 text-slate-900 duration-150 group-hover:text-[#80a39c] group-hover:scale-105" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"/>
+                            <path d="M9 12l2 2l4 -4" />
+                            <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+                        </svg>
+                        <h3>BEST QUALITY</h3>
+                    </li>
+                    <li className="group">
+                        <svg className="size-24 text-slate-900 duration-150 group-hover:text-[#80a39c] group-hover:scale-105" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                        <h3>SUPPORT 24/7</h3>
+                    </li>
+                </ol>
+            </section>
+
         </main>
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-            <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <Image
-                aria-hidden
-                src="https://nextjs.org/icons/file.svg"
-                alt="File icon"
-                width={16}
-                height={16}
-            />
-            Learn
-            </a>
-            <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <Image
-                aria-hidden
-                src="https://nextjs.org/icons/window.svg"
-                alt="Window icon"
-                width={16}
-                height={16}
-            />
-            Examples
-            </a>
-            <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            <Image
-                aria-hidden
-                src="https://nextjs.org/icons/globe.svg"
-                alt="Globe icon"
-                width={16}
-                height={16}
-            />
-            Go to nextjs.org →
-            </a>
-        </footer>
-        </div>
     );
-}
+};
