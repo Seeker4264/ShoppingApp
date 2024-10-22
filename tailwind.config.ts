@@ -12,6 +12,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        smallScale: {
+          '0%, 100%': { transform: 'scale(100%)' },
+          '50%': { transform: 'scale(105%)' },
+        },
+      },
+      animation: {
+        smallScale: 'smallScale 2.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

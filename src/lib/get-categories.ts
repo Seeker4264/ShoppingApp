@@ -1,21 +1,14 @@
-import Categories from "@/app/categories/page";
 import { query } from "./strapi";
+import { CategoryRaw } from "@/constants/Category";
 
 const { STRAPI_HOST } = process.env
 
-type Category = {
-    title: string;
-    cover: {
-        url: string
-    };
-};
-
 export function getCategoriesInfo() {
     return query("categories?populate=cover").then(res => {
-        return res.data.map((category: Category) => {
-            const { title, cover } = category;
+        return res.data.map((category: CategoryRaw) => {
+            const { title, cover, categoryId } = category;
             const image = `${STRAPI_HOST}${cover.url}`;
-            return { title, image };
+            return { title, image, categoryId };
         });
     });
 };

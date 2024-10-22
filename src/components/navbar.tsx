@@ -6,31 +6,36 @@ export default function Navbar() {
     const pathname = usePathname();
     
     return (
-        <header className="flex flex-row justify-between items-center border-b-[1px] border-b-gray-400 p-3 px-[5%] bg-[#F7F7F7]">
-            <h1 className="text-[2rem] font-semibold">Shopping App</h1>
-            <ul className="flex flex-row justify-center gap-4">
-                <li className={`${pathname === "/" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150`}>
+        <header className="flex flex-row justify-between items-center border-b-[1px] border-b-gray-400 p-3 px-[5%] bg-[#e9e9e8]">
+            <h1 className="text-[2rem] font-semibold text-slate-900">Shopping App</h1>
+            <ul className="flex flex-row justify-center gap-6">
+                <li className={`${pathname === "/" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
                     <Link href={"/"}>
                         Home
                     </Link>
                 </li>
-                <li className={`${pathname === "/products" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150`}>
+                <li className={`${pathname === "/products" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
                     <Link href={"/products"}>
                         Products
                     </Link>
                 </li>
-                <li className={`${pathname === "/categories" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150`}>
+                <li className={`${pathname === "/categories" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
                     <Link href={"/categories"}>
                         Categories
                     </Link>
                 </li>
-                <li className={`text-slate-900 hover:text-[#5a7a72] text-xl font-semibold duration-150`}>
+                <li className={`text-slate-900 hover:text-[#5a7a72] text-xl font-medium cursor-default duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
                     About
                 </li>
-                <li className={`${pathname === "/contact" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150`}>
+                <li className={`${pathname === "/contact" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
                     <Link href={"/contact"}>
                         Contact
                     </Link>
+                </li>
+                <li>
+                    <button className={`text-slate-900 hover:text-[#5a7a72] text-xl font-medium cursor-default duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
+                        Switch Mode
+                    </button>
                 </li>
             </ul>
         </header>

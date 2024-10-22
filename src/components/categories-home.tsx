@@ -1,20 +1,18 @@
 import Image from "next/image";
-import { getCategoriesInfo } from "@/lib/get-categories";
 import Link from "next/link";
 
 import moreImg from "@/public/moreImage.jpg";
+import { Category } from "@/constants/Category";
 
-export default async function categoriesHome() {
-    const categories = await getCategoriesInfo();
-
-    if(categories === 0) return null;
+export default async function categoriesHome(categories: Category[]) {
+    if(categories.length === 0) return null;
 
     return (
         <div className="w-3/4">
             <ul className="grid grid-cols-2 gap-4 text-lg text-white">
 
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
-                    <div className="flex flex-col justify-center items-center p-10 size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
+                    <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
                             {categories[0].title}
                         </h3>
@@ -32,7 +30,7 @@ export default async function categoriesHome() {
                 </li>
 
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
-                    <div className="flex flex-col justify-center items-center p-10 size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
+                    <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
                             {categories[1].title}
                         </h3>
@@ -50,7 +48,7 @@ export default async function categoriesHome() {
                 </li>
 
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
-                    <div className="flex flex-col justify-center items-center p-10 size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
+                    <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
                             {categories[2].title}
                         </h3>
@@ -68,7 +66,7 @@ export default async function categoriesHome() {
                 </li>
 
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
-                    <div className="flex flex-col justify-center items-center p-10 size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
+                    <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
                             More
                         </h3>
