@@ -83,7 +83,10 @@ export default async function Home() {
 
             {categories[0] &&
             <section id="firstCategory" className="group flex flex-col gap-5 p-6">
-                <h2 className="w-fit px-10 py-2 text-6xl font-semibold text-slate-900 duration-100 group-hover:text-slate-500 group-hover:scale-110 group-hover:translate-x-[20px]">{categories[0].title}</h2>
+                <h2 className="w-fit px-10 py-2 text-6xl font-semibold text-slate-900 duration-100 group-hover:text-slate-500 group-hover:scale-110 group-hover:translate-x-[20px]">
+                    {categories[0].title}
+                    <div className="rounded-full w-[12rem] h-1 my-4 bg-slate-700 duration-150 group-hover:w-[24rem] group-hover:bg-slate-400" />
+                </h2>
                 <div className="flex flex-row justify-start items-center gap-5 px-4 py-2">
                     {renderCards(categories[0].categoryId)}
                     <article>
@@ -102,7 +105,10 @@ export default async function Home() {
             
             {categories[1] &&
             <section id="secondCategory" className="group flex flex-col gap-5 p-6 bg-[#e9e9e8]">
-                <h2 className="w-fit px-10 py-2 text-6xl font-semibold text-slate-900 duration-100 group-hover:text-slate-500 group-hover:scale-110 group-hover:translate-x-[20px]">{categories[1].title}</h2>
+                <h2 className="w-fit px-10 py-2 text-6xl font-semibold text-slate-900 duration-100 group-hover:text-slate-500 group-hover:scale-110 group-hover:translate-x-[20px]">
+                    {categories[1].title}
+                    <div className="rounded-full w-[12rem] h-1 my-4 bg-slate-700 duration-150 group-hover:w-[24rem] group-hover:bg-slate-400" />
+                </h2>
                 <div className="flex flex-row justify-start items-center gap-5 px-4 py-2">
                     {renderCards(categories[1].categoryId)}
                     <article>
@@ -118,6 +124,32 @@ export default async function Home() {
                 </div>
             </section>
             }
+            
+            {categories[2] &&
+            <section id="thirdCategory" className="group flex flex-col gap-5 p-6">
+                <h2 className="w-fit px-10 py-2 text-6xl font-semibold text-slate-900 duration-100 group-hover:text-slate-500 group-hover:scale-110 group-hover:translate-x-[20px]">
+                    {categories[2].title}
+                    <div className="rounded-full w-[12rem] h-1 my-4 bg-slate-700 duration-150 group-hover:w-[24rem] group-hover:bg-slate-400" />
+                </h2>
+                <div className="flex flex-row justify-start items-center gap-5 px-4 py-2">
+                    {renderCards(categories[2].categoryId)}
+                    <article>
+                        <div className="group/card flex flex-col justify-center items-center border-[1px] border-slate-200 rounded-xl w-fit p-4 h-[20rem] shadow-xl bg-slate-50 duration-150 hover:scale-105 hover:translate-y-[-8px]">
+                            <h3 className="text-2xl font-semibold text-center max-w-[14rem] pb-4 duration-150 group-hover/card:text-[1.75rem]  text-slate-900">
+                                Looking for something else?
+                            </h3>
+                            <Link className="rounded-lg px-4 py-2 text-lg text-white duration-100 bg-slate-700 hover:bg-slate-600 active:bg-slate-800" href={"/categories"}>
+                                Discover
+                            </Link>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            }
+
+            {/*<section id="smallContact" className="flex flex-col gap-5 p-6 bg-[#e9e9e8]">
+
+            </section>*/}
 
         </main>
     );
