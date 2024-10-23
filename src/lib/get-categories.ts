@@ -1,5 +1,5 @@
 import { query } from "./strapi";
-import { CategoryRaw } from "@/constants/Category";
+import { CategoryRaw } from "@/Types/Category";
 
 const { STRAPI_HOST } = process.env
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import moreImg from "@/public/moreImage.jpg";
-import { Category } from "@/constants/Category";
+import { Category } from "@/Types/Category";
 
 export default async function categoriesHome(categories: Category[]) {
     if(categories.length === 0) return null;
@@ -11,6 +11,7 @@ export default async function categoriesHome(categories: Category[]) {
         <div className="w-3/4">
             <ul className="grid grid-cols-2 gap-4 text-lg text-white">
 
+                {categories[0] &&
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
                     <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
@@ -28,7 +29,9 @@ export default async function categoriesHome(categories: Category[]) {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         loading="lazy"/>
                 </li>
+                }
 
+                {categories[1] &&
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
                     <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
@@ -46,7 +49,9 @@ export default async function categoriesHome(categories: Category[]) {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         loading="lazy"/>
                 </li>
+                }
 
+                {categories[2] &&
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
                     <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">
                         <h3>
@@ -64,6 +69,7 @@ export default async function categoriesHome(categories: Category[]) {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         loading="lazy"/>
                 </li>
+                }
 
                 <li className="relative w-full h-full shadow-md shadow-slate-950 duration-150 hover:scale-105">
                     <div className="flex flex-col justify-center items-center p-[4.25rem] size-full backdrop-brightness-[1.4] backdrop-contrast-[1.3] backdrop-saturate-[1.8] [&>h3]:text-2xl [&>h3]:font-medium duration-150 opacity-0 hover:opacity-100">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { Maven_Pro } from 'next/font/google';
 import "./globals.css";
 
@@ -22,9 +23,10 @@ export default function RootLayout({
         return (
             <html lang="en">
                 <body
-                className={`${mavenPro.className} antialiased`}>
+                className={`${mavenPro.className} antialiased website`}>
                     <Navbar />
                     {children}
+                    <Footer />
                 </body>
             </html>
     );
