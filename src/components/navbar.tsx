@@ -14,11 +14,6 @@ export default function Navbar() {
                         Home
                     </Link>
                 </li>
-                <li className={`${pathname === "/products" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
-                    <Link href={"/products"}>
-                        Products
-                    </Link>
-                </li>
                 <li className={`${pathname === "/categories" ? "text-[#7DB3A6]" : "text-slate-900 hover:text-[#5a7a72]"} text-xl font-medium duration-150 hover:scale-110 hover:translate-y-[-0.15rem] active:scale-105`}>
                     <Link href={"/categories"}>
                         Categories

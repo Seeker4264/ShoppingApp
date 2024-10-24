@@ -9,7 +9,7 @@ export default function categoryCard(category: Category) {
                 <h3>
                     {category.title}
                 </h3>
-                <Link className="border-[1px] border-white rounded-sm w-fit px-4 py-2 mt-4 font-semibold duration-150 hover:bg-white hover:text-black" href={"/"}>
+                <Link className="border-[1px] border-white rounded-sm w-fit px-4 py-2 mt-4 font-semibold duration-150 hover:bg-white hover:text-black" href={`/categories/${category.categoryId}`}>
                     Discover
                 </Link>
             </div>
