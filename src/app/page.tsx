@@ -16,7 +16,7 @@ export default async function Home() {
     const renderCards = (category: number) => {
         let prods = [];
         for (let index = 0; index < products.length; index++) {
-            if(index > 3) break;
+            if(prods.length >= 3) break;
             if(Number(products[index].categoryId) === category) {
                 prods.push(
                     <article key={index}>
