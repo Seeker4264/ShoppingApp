@@ -1,6 +1,6 @@
 
 
-export default function CategoryIdLayout({
+export default function ProductIdLayout({
     children,
 }: {
     children: React.ReactNode;

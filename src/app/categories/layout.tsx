@@ -1,15 +1,15 @@
 
 
 export default function CategoriesLayout({
-        children,
-    }: {
-        children: React.ReactNode;
-    }) {
+    children,
+}: {
+    children: React.ReactNode;
+}) {
 
-        return (
-            <>
-                {children}
-            </>
-        );
+    return (
+        <>
+            {children}
+        </>
+    );
 };
   

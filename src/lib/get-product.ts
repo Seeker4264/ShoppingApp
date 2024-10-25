@@ -3,8 +3,8 @@ import { ProductRaw } from "@/types/Product";
 
 const { STRAPI_HOST } = process.env
 
-export function getProductsInfo() {
-    return query("products?populate=cover").then(res => {
+export function getProductInfo(prodId: number) {
+    return query(`products?populate=cover&filters[productId][$eq]=${prodId}`).then(res => {
         return res.data.map((product: ProductRaw) => {
             const { title, description, cover, price, hasDiscount, discountPercentage, categoryId, productId } = product;
             const image = `${STRAPI_HOST}${cover.url}`;

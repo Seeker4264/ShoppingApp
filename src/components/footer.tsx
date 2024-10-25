@@ -23,32 +23,32 @@ export default async function Footer() {
                 <li className="w-56 [&>h4]:text-4xl [&>h4]:font-semibold [&>h4]:py-2 [&>p]:py-1 [&>p]:text-base [&>p]:leading-6">
                     <h4>SECTIONS</h4>
                     <p className="duration-150 hover:text-slate-400 hover:scale-110 hover:translate-x-[12px]">
-                        <a href="/">
+                        <Link href="/">
                             Home
-                        </a>
+                        </Link>
                     </p>
                     <p className="duration-150 hover:text-slate-400 hover:scale-110 hover:translate-x-[12px]">
-                        <a href="/categories">
+                        <Link href="/categories">
                             Categories
-                        </a>
+                        </Link>
                     </p>
                     <p className="duration-150 hover:text-slate-400 hover:scale-110 hover:translate-x-[12px]">
-                        <a href="#">
+                        <Link href="#">
                             More
-                        </a>
+                        </Link>
                     </p>
                 </li>
                 <li className="w-56 [&>h4]:text-4xl [&>h4]:font-semibold [&>h4]:py-2 [&>p]:py-1 [&>p]:text-base [&>p]:leading-6">
                     <h4>CONTACT</h4>
                     <p className="duration-150 hover:text-slate-400 hover:scale-110 hover:translate-x-[12px]">
-                        <a href="#">
+                        <Link href="/contact">
                             Contact Us
-                        </a>
+                        </Link>
                     </p>
                     <p className="duration-150 hover:text-slate-400 hover:scale-110 hover:translate-x-[12px]">
-                        <a href="#">
+                        <Link href="#">
                             FAQ's
-                        </a>
+                        </Link>
                     </p>
                 </li>
             </ul>

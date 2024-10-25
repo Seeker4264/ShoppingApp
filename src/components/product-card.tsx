@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/Types/Product";
+import { Product } from "@/types/Product";
 
 export default function productCard(product: Product) {
     if (!product) return null;
@@ -17,7 +17,7 @@ export default function productCard(product: Product) {
 
     return (
         <div className="grid grid-rows-2 grid-cols-1 border-[1px] border-slate-200 rounded-xl w-fit p-4 h-[20rem] shadow-xl bg-slate-50 duration-150 hover:scale-105 hover:translate-y-[-8px]">
-            <Link href={"/products"}>
+            <Link href={`/product/${product.productId}`}>
                 <Image
                     className="rounded-md justify-self-center object-cover max-w-[14rem] h-[10rem] contrast-[0.8] brightness-[0.5] duration-150 hover:contrast-[1.1] hover:brightness-[0.9]"
                     src={product.image}

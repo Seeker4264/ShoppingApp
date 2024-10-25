@@ -7,8 +7,8 @@ export default function ContactLayout({
 }) {
 
     return (
-        <div>
+        <>
             {children}
-        </div>
+        </>
     );
 };

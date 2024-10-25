@@ -3,7 +3,7 @@ import { getProductsInfo } from "@/lib/get-products";
 
 import productCard from "@/components/product-card";
 
-export default async function Products({
+export default async function Category({
     params
 }: {
     params: { categoryId: number }
@@ -39,7 +39,7 @@ export default async function Products({
     return (
         <main className="group flex flex-col row-start-2 items-center sm:items-start">
 
-            <h1 className="w-fit text-5xl text-slate-900 font-semibold mx-6 mt-6 mb-4 duration-100 group-hover:text-slate-500 group-hover:scale-110  group-hover:translate-x-[48px]  group-hover:font-bold">Products available</h1>
+            <h1 className="w-fit text-5xl text-slate-900 font-semibold mx-6 mt-6 mb-4 duration-100 group-hover:text-slate-500 group-hover:scale-110  group-hover:translate-x-[48px] group-hover:font-bold">Products available</h1>
             <div className="rounded-full w-[32rem] h-1 mx-6 mb-2 bg-slate-700 duration-150 group-hover:w-[40rem] group-hover:bg-slate-400" />
             <section className="grid grid-cols-4 gap-6 m-6">
                 {renderCards(params.categoryId)}

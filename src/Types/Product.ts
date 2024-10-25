@@ -6,6 +6,7 @@ export type Product = {
     hasDiscount: boolean;
     discountPercentage: number;
     categoryId: number;
+    productId: number;
 };
 
 export type ProductRaw = {
@@ -18,4 +19,5 @@ export type ProductRaw = {
     hasDiscount: boolean;
     discountPercentage: number;
     categoryId: number;
+    productId: number;
 };
