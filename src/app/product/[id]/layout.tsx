@@ -1,6 +1,6 @@
 
 
-export default function ContactLayout({
+export default function ProductIdLayout({
     children,
 }: {
     children: React.ReactNode;

@@ -1,14 +1,14 @@
 
 
-export default function ProductsLayout({
+export default function CategoryIdLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
 
     return (
-        <div>
+        <>
             {children}
-        </div>
+        </>
     );
 };

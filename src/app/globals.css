@@ -2,14 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        @apply appearance-none;
+    }
+}
+
 /*
 :root {
     scrollbar-gutter: stable both-edges;
 }
 */
 
+/*
 .website {
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
+*/
