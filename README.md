@@ -18,4 +18,4 @@ https://strapi.io/
 - Strapi 5 for the data management
 
 ### Deployment
-- Render: https://render.com/
+- Vercel: https://vercel.com/
