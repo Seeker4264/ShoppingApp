@@ -14,7 +14,7 @@ export default async function Home() {
     const products = await getProductsInfo();
 
     const renderCards = (category: number) => {
-        let prods = [];
+        const prods = [];
         for (let index = 0; index < products.length; index++) {
             if(prods.length >= 3) break;
             if(Number(products[index].categoryId) === category) {

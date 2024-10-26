@@ -6,7 +6,7 @@ export default async function Categories() {
     const categories: Category[] = await getCategoriesInfo();
 
     const renderCats = () => {
-        let cats = [];
+        const cats = [];
         if(categories.length === 0) return (
             <h2 className="text-slate-900">
                 Nothing found right now...

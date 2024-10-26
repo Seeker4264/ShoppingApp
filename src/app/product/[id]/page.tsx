@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getProductInfo } from "@/lib/get-product";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 

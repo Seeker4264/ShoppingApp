@@ -47,7 +47,7 @@ export default async function Footer() {
                     </p>
                     <p className="duration-150 hover:text-slate-400 hover:scale-110 hover:translate-x-[12px]">
                         <Link href="#">
-                            FAQ's
+                            FAQ&apos;s
                         </Link>
                     </p>
                 </li>

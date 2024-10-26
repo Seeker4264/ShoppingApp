@@ -11,7 +11,7 @@ export default async function Category({
     const products = await getProductsInfo();
 
     const renderCards = (category: number) => {
-        let prods = [];
+        const prods = [];
         for (let index = 0; index < products.length; index++) {
             if(Number(products[index].categoryId) === Number(category)) {
                 prods.push(
@@ -25,7 +25,7 @@ export default async function Category({
             <article>
                 <div className="group/card flex flex-col justify-center items-center border-[1px] border-slate-200 rounded-xl w-fit p-4 h-[20rem] shadow-xl bg-slate-50 duration-150 hover:scale-105 hover:translate-y-[-8px]">
                     <h3 className="text-3xl font-semibold text-center max-w-[14rem] pb-4 duration-150 text-slate-900">
-                        There's no products available for this category...
+                        There&apos;s no products available for this category...
                     </h3>
                     <Link className="rounded-lg px-4 py-2 text-lg font-medium text-white duration-100 bg-slate-700 hover:bg-slate-600 active:bg-slate-800" href={"/categories"}>
                         See more
