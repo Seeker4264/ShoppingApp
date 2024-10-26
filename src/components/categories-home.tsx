@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import moreImg from "@/public/moreImage.jpg";
-import { Category } from "@/types/Category";
+import { Category } from "@/Types/Category";
 import categoryCard from "./category-card";
 
 export default async function categoriesHome(categories: Category[]) {
