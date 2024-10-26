@@ -39,9 +39,11 @@ export default async function Category({
     return (
         <main className="group flex flex-col row-start-2 items-center sm:items-start">
 
-            <h1 className="w-fit text-5xl text-slate-900 font-semibold mx-6 mt-6 mb-4 duration-100 group-hover:text-slate-500 group-hover:scale-110  group-hover:translate-x-[48px] group-hover:font-bold">Products available</h1>
-            <div className="rounded-full w-[32rem] h-1 mx-6 mb-2 bg-slate-700 duration-150 group-hover:w-[40rem] group-hover:bg-slate-400" />
-            <section className="grid grid-cols-4 gap-6 m-6">
+            <h1 className="w-fit text-3xl lg:text-5xl text-slate-900 font-semibold mx-6 mt-6 mb-4 duration-100 group-hover:text-slate-500 group-hover:scale-110 lg:group-hover:translate-x-[48px] group-hover:font-bold">Products available</h1>
+
+            <div className="rounded-full w-[12rem] lg:w-[32rem] h-1 mx-6 mb-2 bg-slate-700 duration-150 group-hover:w-[16rem] lg: lg:group-hover:w-[40rem] group-hover:bg-slate-400" />
+            
+            <section className="grid grid-cols-1 lg:grid-cols-4 gap-6 m-6">
                 {renderCards(params.categoryId)}
             </section>
 

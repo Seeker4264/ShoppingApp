@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function Footer() {
     return (
         <footer className="flex flex-col justify-center items-center shadow-lg text-slate-100 bg-[#404242]">
-            <ul className="flex flex-row justify-center gap-12 py-10">
+            <ul className="flex flex-col lg:flex-row justify-center gap-12 py-10">
                 <li className="w-72 [&>h4]:text-4xl [&>h4]:font-semibold [&>h4]:py-2 [&>p]:py-1 [&>p]:text-base [&>p]:leading-6">
                     <h4>SHOPPING APP</h4>
                     <p>
@@ -53,7 +53,7 @@ export default async function Footer() {
                 </li>
             </ul>
             <div className="w-[90%] h-[0.125rem] bg-slate-100" />
-            <h5 className="py-8 font-medium">Copyright &copy; 2024 Shopping App | All Rights Reserved.</h5>
+            <h5 className="py-8 text-center font-medium">Copyright &copy; 2024 Shopping App | All Rights Reserved.</h5>
         </footer>
     );
 };

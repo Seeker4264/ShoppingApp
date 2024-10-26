@@ -19,12 +19,11 @@ export default function productCard(product: Product) {
         <div className="grid grid-rows-2 grid-cols-1 border-[1px] border-slate-200 rounded-xl w-fit p-4 h-[20rem] shadow-xl bg-slate-50 duration-150 hover:scale-105 hover:translate-y-[-8px]">
             <Link href={`/product/${product.productId}`}>
                 <Image
-                    className="rounded-md justify-self-center object-cover max-w-[14rem] h-[10rem] contrast-[0.8] brightness-[0.5] duration-150 hover:contrast-[1.1] hover:brightness-[0.9]"
+                    className="rounded-md justify-self-center object-cover lg:max-w-[14rem] h-[10rem] contrast-[0.8] brightness-[0.5] duration-150 hover:contrast-[1.1] hover:brightness-[0.9]"
                     src={product.image}
                     width={240}
                     height={240}
-                    alt={`${product.title}-image`}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    alt={`${product.title}-image`}/>
             </Link>
                 
             <div className="flex flex-row justify-between items-end p-2">
