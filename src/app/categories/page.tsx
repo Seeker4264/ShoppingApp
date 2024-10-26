@@ -1,9 +1,8 @@
 import { getCategoriesInfo } from "@/lib/get-categories";
 import categoryCard from "@/components/category-card";
-import { Category } from "@/types/Category";
 
 export default async function Categories() {
-    const categories: Category[] = await getCategoriesInfo();
+    const categories = await getCategoriesInfo();
 
     const renderCats = () => {
         const cats = [];
